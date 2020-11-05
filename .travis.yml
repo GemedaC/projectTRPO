@@ -1,7 +1,5 @@
 language: cpp
 compaler: g++
 script:
-- mkdir build
-- cd biuld
 - cmake ..
 - cmake --build .
