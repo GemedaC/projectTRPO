@@ -1,5 +1,7 @@
 language: cpp
 compaler: g++
 script:
-- cmake ..
+- mkdir build
+- cd build
+- cmake ../..
 - cmake --build .
