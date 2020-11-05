@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(Test)
+
+set(HEADERS
+	test.h)
+set(SOURCES
+	main.cpp
+	test.cpp)
+
+add_executable(main ${HEADERS} ${SOURCES})
+
