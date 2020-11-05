@@ -1,9 +1,7 @@
 language: cpp
 compaler: g++
 script:
-- cd test
 - mkdir build
 - cd biuld
 - cmake ..
 - cmake --build .
-- ctest
