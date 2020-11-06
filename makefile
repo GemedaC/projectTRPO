@@ -1,11 +1,11 @@
 all: hello
 
-hello: main.o test.o
+hello: main.o
 
 main.o:
 	g++ src/main.cpp -o main
 run:
-	.src/main
+	main
 
 .PHONY: clean
 
