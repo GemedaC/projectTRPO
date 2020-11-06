@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <string>
-#include "test.h"
+#include "test.cpp"
 
 
 int main(int argc, char* argv[]) {
