@@ -2,7 +2,8 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cmath>
-#include "funcCalc.cpp"
+#include <conio.h>
+#include "funcCalc.h"
 
 int main(int argc, const char* argv[])
 {
