@@ -1,5 +1,6 @@
 language: cpp
 compaler: g++
 script:
-- cmake .
-- cmake --build .
+- cmake --version
+- cmake CMakeLists.txt
+- cmake  --build . --target neat
