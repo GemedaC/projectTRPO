@@ -1,5 +1,5 @@
 language: cpp
-compaler: g++
+compaler: gcc
 before_script:
 - cmake --version
 - mkdir build
