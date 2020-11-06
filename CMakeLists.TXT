@@ -9,4 +9,3 @@ set(SOURCES
 	test/test.cpp)
 
 add_executable(main ${HEADERS} ${SOURCES})
-
