@@ -1,9 +1,8 @@
 language: cpp
 compaler: gcc
-before_script:
-- mkdir build
-- cd build
-- cmake ..
 script:
 - cmake --version
-- make
+- mkdir build
+- cd build
+- cmake .. -DCMAKE_BUILD_TYPE=$BUILD_CONFIGURATION
+- cmake --build .
