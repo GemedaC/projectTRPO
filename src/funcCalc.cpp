@@ -3,27 +3,34 @@
 #include <cstdio>
 #include <cmath>
 
-void Plus(float a, float b)
+float Plus(float a, float b)
 {
-	a = a + b;
+	a += b;
 	std::cout << "Answer - " << a << std::endl;
+	return a;
 }
-void Minus(float a, float b)
+float Minus(float a, float b)
 {
 	a -= b;
 	std::cout << "Answer - " << a << std::endl;
+	return a;
 }
-void Del(float a, float b) 
+float Del(float a, float b)
 {
 	a /= b;
 	std::cout << "Answer - " << a << std::endl;
+	return a;
 }
-void Umn(float a, float b)
+float Umn(float a, float b)
 {
 	a *= b;
 	std::cout << "Answer - " << a << std::endl;
+	return a;
 }
-void Step(float a, float b)
+float Step(float a, float b)
 {
-	std::cout << "Answer - " << pow(a,b) << std::endl;
+	float summ = 0.f;
+	summ = pow(a, b);
+	std::cout << "Answer - " << summ << std::endl;
+	return summ;
 }

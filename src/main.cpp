@@ -18,7 +18,7 @@ int main(int argc, const char* argv[])
 		if (Mass[0] == '+') Plus(first, second);
 		if (Mass[0] == '-') Minus(first, second);
 		if (Mass[0] == '*') Umn(first, second);
-		if (Mass[0] == '/') Del(first, second);
+		if (Mass[0] == '/' || Mass[0] == ':') Del(first, second);
 		if (Mass[0] == '^') Step(first, second);
 	}
 	std::cin.get();
