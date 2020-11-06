@@ -1,7 +1,11 @@
 language: cpp
-compaler: gcc
-script:
+compaler: 
+- gcc
+before_script:
 - mkdir build
 - cd build
-- cmake ..
-- cmake --build .
+- cmake --version
+- cmake -DCMAKE_VERBOSE_MAKEFILE=ON ..
+script:
+- make
+- make test
