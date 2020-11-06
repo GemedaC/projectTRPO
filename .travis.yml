@@ -1,4 +1,7 @@
 language: cpp
 compaler: gcc
 script:
-- make
+- mkdir build
+- cd build
+- cmake ..
+- cmake --build .
