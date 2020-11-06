@@ -1,7 +1,10 @@
 language: cpp
 compaler: g++
-script:
+before_script:
+- cmake --version
 - mkdir build
 - cd build
 - cmake ..
-- cmake --build .
+script:
+- make
+- make test
