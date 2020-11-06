@@ -1,5 +1,4 @@
 ﻿#include "pch.h"
-#include "CppUnitTest.h"
 #include "../src/funcCalc.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
