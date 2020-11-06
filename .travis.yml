@@ -1,6 +1,10 @@
 language: cpp
 compaler: g++
-script:
+before_script:
 - cmake --version
-- cmake CMakeLists.txt
-- cmake  --build . --target neat
+- mkdir build
+- cd build
+- cmake ..
+script:
+- make
+- make test
