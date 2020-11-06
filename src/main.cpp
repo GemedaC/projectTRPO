@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cmath>
-#include <conio.h>
 #include "funcCalc.h"
 
 int main(int argc, const char* argv[])
