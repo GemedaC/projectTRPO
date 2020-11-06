@@ -1,15 +1,14 @@
-CC=gcc
+all: hello
 
-CFLAGS=-c -Wall
+hello: main.o
 
-all : hello
+main.o:
+	g++ src/main.cpp -o main
+	
+run:
+	main
 
-hello : main.o test.o test.o $(CC) main.o test.o test.o -o hello
+.PHONY: clean
 
-main.o : main.cpp $(CC) $(CFLAGS) main.cpp
-
-test.o : test.h $(CC) $(CFLAGS) test.h
-
-test.o : test.cpp $(CC) $(CFLAGS) test.cpp
-
-clean : rm -rf *.o hello
+clean:
+	rm -rf *.o
