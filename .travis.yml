@@ -1,10 +1,9 @@
 language: cpp
 compaler: gcc
 before_script:
-- cmake --version
 - mkdir build
 - cd build
-- cmake ../..
+- cmake ..
 script:
+- cmake --version
 - make
-- make test
