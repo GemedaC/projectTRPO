@@ -6,9 +6,10 @@ main.o:
 	g++ src/main.cpp -o main
 test.o:
 	g++ test/UnitTestCalc.cpp -o testing
-	
+test:
+	.test/testing
 run:
-	main testing
+	.src/main
 
 .PHONY: clean
 
