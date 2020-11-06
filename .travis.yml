@@ -4,7 +4,7 @@ before_script:
 - cmake --version
 - mkdir build
 - cd build
-- cmake ..
+- cmake ../..
 script:
 - make
 - make test
