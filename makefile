@@ -3,7 +3,7 @@ all: hello
 hello: main.o
 
 main.o:
-	g++ src/main.cpp -o main
+	g++ src/main.cpp src/funcCalc.h -o main
 run:
 	main
 
