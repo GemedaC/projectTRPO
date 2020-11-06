@@ -1,4 +1,4 @@
-#include "../googletest/googletest/include/gtest/gtest.h"
+#include "gtest/gtest.h"
 #include "..\src\funcCalc.h"
 
 TEST(DefaultTestStep, StepTwo)
