@@ -33,6 +33,22 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
+add_library(coverage_config INTERFACE)
+
+option(CODE_COVERAGE "Enable coverage reporting" OFF)
+if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  # Add required flags (GCC & LLVM/Clang)
+  target_compile_options(coverage_config INTERFACE
+    -O0        # no optimization
+    -g         # generate debug info
+    --coverage # sets all required flags
+  )
+  if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.13)
+    target_link_options(coverage_config INTERFACE --coverage)
+  else()
+    target_link_libraries(coverage_config INTERFACE --coverage)
+  endif()
+endif(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
 
 # Now simply link against gtest or gtest_main as needed. Eg
 enable_testing()
