@@ -35,6 +35,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
+enable_testing()
 add_executable(test_list test/GtestCalc.cpp)
 target_link_libraries(test_list gtest_main)
 add_test(NAME FuncTestCal_list COMMAND test_list)
