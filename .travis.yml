@@ -9,13 +9,9 @@ addons:
     - gcc-4.8
     - g++-4.8
     - cmake
-install:
-- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8 -std=c++11 -DENABLE_REINFORCEMENT_LEARNING" CC="gcc-4.8"; fi
-before_script:
+script:
 - mkdir build
 - cd build
-- cmake --version
-- cmake -DCMAKE_VERBOSE_MAKEFILE=ON ..
-script:
-- make
-- make test
+- cmake .. -DCMAKE_BUILD_TYPE=$BUILD_CONFIGURATION -DTARGET_CPU=$TARGET_CPU
+- cmake --build .
+- ctest --output-on-failure
