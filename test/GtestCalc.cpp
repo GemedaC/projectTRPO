@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "..\src\funcCalc.cpp"
+#include "funcCalc.cpp"
 
 TEST(DefaultTestStep, StepTwo)
 {
