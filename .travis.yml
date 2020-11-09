@@ -1,5 +1,5 @@
 language: cpp
-compaler: 
+compiler: 
 - gcc
 addons:
   apt:
