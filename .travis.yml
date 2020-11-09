@@ -9,9 +9,13 @@ addons:
     - gcc-4.8
     - g++-4.8
     - cmake
+before_install:
+- sudo pip install codecov
 script:
 - mkdir build
 - cd build
 - cmake .. -DCMAKE_BUILD_TYPE=$BUILD_CONFIGURATION -DTARGET_CPU=$TARGET_CPU
 - cmake --build .
 - ctest 
+after_success:
+- codecov
