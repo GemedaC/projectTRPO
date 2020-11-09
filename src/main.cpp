@@ -4,7 +4,7 @@
 #include <cmath>
 #include "funcCalc.h"
 
-int main(int argc, const char* argv[])
+int main()
 {
 	const int SizeChar = 1;
 	char Mass[SizeChar];
